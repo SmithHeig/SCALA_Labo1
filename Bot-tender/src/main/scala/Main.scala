@@ -1,6 +1,7 @@
 import Chat.Tokenizer
 import _root_.Chat.Tokens._
 import Utils.ClinksCalculator.calculateCombination
+import Utils.SpellChecker.stringDistance
 
 import scala.io.StdIn
 
