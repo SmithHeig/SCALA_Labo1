@@ -21,4 +21,24 @@ object Tokens {
   val PSEUDO: Token      = 9
   val NUM: Token         = 10
   val EOL: Token         = 11
+
+  /**
+    * Fonction to return the token (String, Token) by getting the string name
+    * @param str name of the token
+    * @return name of the token and his number
+   */
+  def getToken(str:String): (String, Token) = str match {
+    case "bonjour" => (str , BONJOUR)
+    case "je" => (str, JE)
+    case "etre" => (str, ETRE)
+    case "vouloir" => (str, VOULOIR)
+    case "et" => (str, ET)
+    case "ou" => (str, OU)
+    case "biere" => (str, BIERE)
+    case "croissant" => (str, CROISSANT)
+    case "eol" => (str, EOL)
+    case x if x(0) == '_' => (str, PSEUDO) // is a pseudo (starting by a _)
+    case x if x forall Character.isDigit => (str, NUM) // is a number
+    case _ => (str, UNKNOWN) // UNKNOWN
+  }
 }
