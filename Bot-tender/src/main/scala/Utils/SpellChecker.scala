@@ -1,3 +1,10 @@
+/**
+  * Scala: Labo01 - Step 2 - Spell Checker
+  *
+  * Auteurs: J.Châtillon, J.Smith
+  * Date: 17.03.2019
+  */
+
 package Utils
 import scala.math.min
 
@@ -8,7 +15,6 @@ object SpellChecker {
     * @param s2 the second word
     * @return an integer value, which indicates the Levenshtein distance between "s1" and "s2"
     */
-  // TODO - Step 2
   def stringDistance(s1: String, s2: String): Int = {
     def loop(s1 : List[Char], s2 : List[Char], acc: Int) : Int = {
       (s1, s2) match {
@@ -28,7 +34,6 @@ object SpellChecker {
     * @param misspelledWord the misspelled word to correct
     * @return the closest word from "misspelledWord"
     */
-  // TODO - Step 2
   def getClosestWordInDictionary(misspelledWord: String): String =  misspelledWord match {
     case str if str forall Character.isDigit => str // C'est un nombre, on le retourne
     case str if str(0) == '_' => str // C'est un pseudonyme, on le retourne

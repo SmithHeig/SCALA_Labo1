@@ -1,8 +1,13 @@
+/**
+  * Scala: Labo01 - Main
+  *
+  * Auteurs: J.Châtillon, J.Smith
+  * Date: 17.03.2019
+  */
+
 import Chat.Tokenizer
 import _root_.Chat.Tokens._
 import Utils.ClinksCalculator.calculateCombination
-import Utils.SpellChecker.stringDistance
-
 import scala.io.StdIn
 
 object Main extends App {

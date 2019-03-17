@@ -1,3 +1,10 @@
+/**
+  * Scala: Labo01 - Step 1 - Clinks Calculator
+  *
+  * Auteurs: J.Châtillon, J.Smith
+  * Date: 17.03.2019
+  */
+
 package Utils
 
 /**
@@ -9,7 +16,6 @@ object ClinksCalculator {
     * @param n the number to compute
     * @return n!
     */
-  // TODO - Step 1
   def factorial(n: Int): Int = {
     def loop(n: Int, acc: Int) : Int = {
       if(n == 0) acc else loop(n -1, acc * n)
@@ -23,7 +29,6 @@ object ClinksCalculator {
     * @param k the second number
     * @return n choose k
     */
-  // TODO - Step 1
   def calculateCombination(n: Int, k: Int): Int = {
     factorial(n) / (factorial(k) * factorial(n-k))
   }

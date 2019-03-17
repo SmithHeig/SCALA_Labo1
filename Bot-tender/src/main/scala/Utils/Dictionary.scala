@@ -1,3 +1,10 @@
+/**
+  * Scala: Labo01 - Step 3 - Dictionary
+  *
+  * Auteurs: J.Châtillon, J.Smith
+  * Date: 17.03.2019
+  */
+
 package Utils
 
 /**

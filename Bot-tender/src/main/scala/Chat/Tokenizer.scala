@@ -1,7 +1,13 @@
+/**
+  * Scala: Labo01 - Step 3 - Tokenizer
+  *
+  * Auteurs: J.Châtillon, J.Smith
+  * Date: 17.03.2019
+  */
+
 package Chat
 
 import Tokens._
-import Utils.Dictionary
 import Utils.SpellChecker._
 class Tokenizer(input: String) {
 
@@ -10,7 +16,6 @@ class Tokenizer(input: String) {
   /**
     * Separate the user's input into tokens.
     */
-  // TODO - Step 3
   def tokenize(): Unit = {
     tokens = input
       .toLowerCase() // Mettre tous en minuscule. Did that first to lowercase letters with accent too ex: Ê
@@ -25,7 +30,6 @@ class Tokenizer(input: String) {
     * Get the next token of the user input, or OEL if there is no more token.
   	* @return a tuple that contains the string value of the current token, and the identifier of the token
     */
-  // TODO - Step 3
   def nextToken(): (String, Token) = {
     index += 1 // Go to next token
     if(index < tokens.length) tokens(index) else getToken("eol") // return the token or EOL if finish
